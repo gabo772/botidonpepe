@@ -126,6 +126,9 @@ public class Login extends javax.swing.JFrame {
         String password = new String(txtPass.getPassword());
         if(cController.validarUsuario(txtUsername.getText(), password)){
             JOptionPane.showMessageDialog(null, "Se ha ingresado correctamente","Login ok",JOptionPane.INFORMATION_MESSAGE);
+            MainLogin mainLogin = new MainLogin();
+            mainLogin.setVisible(true);
+            this.dispose();
         }else{
             JOptionPane.showMessageDialog(null, "Los datos de ingreso son incorrectos","Credenciales invalidas",JOptionPane.WARNING_MESSAGE);
         }
